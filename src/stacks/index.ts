@@ -1,17 +1,10 @@
-class Stack {
-  items = []
-  constructor() {
-    this.items = []
-  }
-
-  push(element) {
-    this.items.push(element)
-  }
-}
+import { StackObj } from "./object-based-stack-class"
+import { StackArray } from "./array-based-stack-class"
 
 export const run = () => {
 
-  const stack = new Stack()
+  // const stack = new StackObj()
+  const stack = new StackArray()
   stack.push(1)
   stack.push(2)
   stack.push(3)
