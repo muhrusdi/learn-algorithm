@@ -23,6 +23,14 @@ export class StackObj {
     return this.count === 0
   }
 
+  peek() {
+    if (this.isEmpty()) {
+      return
+    }
+
+    return this.items[this.count - 1]
+  }
+
   pop() {
     if (this.isEmpty()) {
       return undefined

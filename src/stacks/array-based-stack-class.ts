@@ -1,26 +1,27 @@
+const _items = Symbol("items")
 export class StackArray {
-  items = []
+  _items = []
   constructor() {
-    this.items = []
+    this[_items] = []
   }
 
   push(element) {
-    this.items.push(element)
+    this._items.push(element)
   }
 
   peek() {
-    return this.items[this.items.length - 1]
+    return this._items[this._items.length - 1]
   }
 
   pop() {
-    this.items.pop()
+    return this._items.pop()
   }
 
   clear() {
-    this.items = []
+    this._items = []
   }
 
   isEmpty() {
-    return this.items.length === 0
+    return this._items.length === 0
   }
 }
