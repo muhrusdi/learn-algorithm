@@ -30,5 +30,5 @@ export const run = () => {
 
 
   console.log("----peek",   queue.peek())
-  console.log(queue.items)
+  console.log(queue.toString())
 }
